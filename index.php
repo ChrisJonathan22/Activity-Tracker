@@ -14,5 +14,30 @@
             <li><a href="/activities.php">Activities</a></li>
         </ul>
     </header>
+
+    <div class="content_container">
+        <div class="form_container">
+            <form action="/includes/save_activity.php" method="post"> 
+                <div class="activity_container">
+                    <label>Select an activity</label>
+                    <select>
+                        <option selected>Activity</option>
+                        <option>Fitness</option>
+                        <option>Leisure</option>
+                        <option>Work</option>
+                        <option>Eating</option>
+                        <option>Reading</option>
+                        <option>Sleeping</option>
+                    </select>
+                </div>
+                <div class="hours">    
+                    <label>Hours</label>
+                    <input type="number" name="" id="" max="24">
+                </div>
+                <label>Minutes</label>
+                <input type="number" name="" id="" max="60">
+            </form>    
+        </div>
+    </div>
 </body>
 </html>
