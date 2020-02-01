@@ -37,3 +37,21 @@ body {
     left: 50%;
     margin-left: -10px;
 }
+
+.content_container {
+    text-align: center;
+}
+
+.form_container {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.activity_container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.hours {
+    padding-bottom: 30px;
+}
