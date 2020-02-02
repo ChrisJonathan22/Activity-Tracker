@@ -30,14 +30,26 @@
                         <option>Sleeping</option>
                     </select>
                 </div>
+                <div class="date">    
+                    <label>Date:</label>
+                    <input type="date" name="" id="">
+                </div>
                 <div class="hours">    
-                    <label>Hours</label>
+                    <label>Hours:</label>
                     <input type="number" name="" id="" max="24">
                 </div>
-                <label>Minutes</label>
-                <input type="number" name="" id="" max="60">
+                <div class="minutes">
+                    <label>Minutes:</label>
+                    <input type="number" name="" id="" max="60">
+                </div>    
             </form>    
         </div>
     </div>
 </body>
 </html>
+
+<?php 
+
+    include_once './includes/db.inc.php';
+
+?>
