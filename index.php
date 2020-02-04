@@ -41,15 +41,12 @@
                 <div class="minutes">
                     <label>Minutes:</label>
                     <input type="number" name="" id="" max="60">
-                </div>    
+                </div>   
+                <div class="submit_btn">
+                    <input type="submit" value="Submit"> 
+                </div>
             </form>    
         </div>
     </div>
 </body>
 </html>
-
-<?php 
-
-    include_once './includes/db.inc.php';
-
-?>
