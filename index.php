@@ -20,8 +20,8 @@
             <form action="/includes/save_activity.php" method="post"> 
                 <div class="activity_container">
                     <label>Select an activity</label>
-                    <select>
-                        <option selected>Activity</option>
+                    <select name="activity_name" required>
+                        <option disabled selected>Activity</option>
                         <option>Fitness</option>
                         <option>Leisure</option>
                         <option>Work</option>
@@ -32,15 +32,15 @@
                 </div>
                 <div class="date">    
                     <label>Date:</label>
-                    <input type="date" name="" id="">
+                    <input type="date" name="date" required id="">
                 </div>
                 <div class="hours">    
                     <label>Hours:</label>
-                    <input type="number" name="" id="" max="24">
+                    <input type="number" name="hours" required id="" max="24">
                 </div>
                 <div class="minutes">
                     <label>Minutes:</label>
-                    <input type="number" name="" id="" max="60">
+                    <input type="number" name="minutes" required id="" max="60">
                 </div>   
                 <div class="submit_btn">
                     <input type="submit" value="Submit"> 
