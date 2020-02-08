@@ -68,3 +68,14 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
+
+.pie_chart {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+    padding-top: 5em;
+}
+
+.title {
+    text-align: center;
+}
