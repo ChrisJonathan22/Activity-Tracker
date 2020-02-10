@@ -16,6 +16,13 @@
         </ul>
     </header>
     <h1 class="title">Activities</h1>
+    <?php
+    $name = "Chris";
+    ?>
+    <script>
+        let list = "<?php echo $name; ?>";
+        console.log(list);
+    </script>
     <canvas id="myChart" class="pie_chart" width="400" height="400"></canvas>
 <script src="/js/script.js"></script>
 </body>

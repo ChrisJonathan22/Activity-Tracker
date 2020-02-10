@@ -12,6 +12,7 @@
     $query = "INSERT INTO activity (activity_date, activity_name, activity_hours, activity_minutes) 
     VALUES ('$date', '$activity_name', '$hours', '$minutes');";
 
-    mysqli_query($conn, $query);
+    $conn = new Database();
+    mysqli_query($conn->connect(), $query);
 
 ?>
