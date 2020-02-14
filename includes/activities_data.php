@@ -32,27 +32,39 @@ if ($resultCheck > 0) {
 
         switch ($row["activity_name"]) {
             case "Fitness":
-                $fitness += $row["activity_hours"];
+                $fitness += $row["activity_hours"] * 60;
+                $fitness += $row["activity_minutes"];
+                $fitness /= 60;
             break;
 
             case "Leisure":
-                $leisure += $row["activity_hours"];
+                $leisure += $row["activity_hours"] * 60;
+                $leisure += $row["activity_minutes"];
+                $leisure /= 60;
             break;
 
             case "Work":
-                $work += $row["activity_hours"];
+                $work += $row["activity_hours"] * 60;
+                $work += $row["activity_minutes"];
+                $work /= 60;
             break;
 
             case "Eating":
-                $eating += $row["activity_hours"];
+                $eating += $row["activity_hours"] * 60;
+                $eating += $row["activity_minutes"];
+                $eating /= 60;
             break;
 
             case "Reading":
-                $reading += $row["activity_hours"];
+                $reading += $row["activity_hours"] * 60;
+                $reading += $row["activity_minutes"];
+                $reading /= 60;
             break;
 
             case "Sleeping":
-                $sleeping += $row["activity_hours"];
+                $sleeping += $row["activity_hours"] * 60;
+                $sleeping += $row["activity_minutes"];
+                $sleeping /= 60;
             break;
 
             default:
@@ -63,7 +75,8 @@ if ($resultCheck > 0) {
     echo "0 results";
 }
 
-echo "Fitness hours " . $fitness;
+echo "Time spent sleeping: " . $sleeping;
+
 
 
 ?>
