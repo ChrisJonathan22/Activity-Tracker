@@ -17,7 +17,11 @@
     </header>
     <h1 class="title">Activities</h1>
     <?php
-    $name = "Chris";
+
+    // include_once(dirname(__FILE__)."/includes/activities_data.php");
+
+    // echo var_dump($activities);
+
     ?>
     <script>
         let list = "<?php echo $name; ?>";

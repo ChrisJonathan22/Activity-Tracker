@@ -75,9 +75,16 @@ if ($resultCheck > 0) {
     echo "0 results";
 }
 
-echo "Time spent sleeping: " . $sleeping;
+echo "Time spent sleeping: " . $reading;
 
-
+$activities = array(
+    "Fitness" => $fitness,
+    "Leisure" => $leisure,
+    "Work" => $work,
+    "Eating" => $eating,
+    "Reading" => $reading,
+    "Sleeping" => $sleeping
+);
 
 ?>
 </body>
