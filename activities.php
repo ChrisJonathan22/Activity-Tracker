@@ -24,7 +24,7 @@
     // include_once $_SERVER["DOCUMENT_ROOT"]."/includes/activities_data.php";
     echo $_SERVER["DOCUMENT_ROOT"]."/includes/activities_data.php";
 
-    // echo var_dump($activities);
+    echo var_dump($activities);
 
     $path = "includes/activities_data.php";
     echo "path : $path";
