@@ -22,13 +22,17 @@
     // include_once DOC_ROOT_PATH . "./includes/activities_data.php";
     // include $_SERVER["DOCUMENT_ROOT"] . "/includes/activities_data.php";
     // include_once $_SERVER["DOCUMENT_ROOT"]."/includes/activities_data.php";
-    echo $_SERVER["DOCUMENT_ROOT"]."/includes/activities_data.php";
+    // echo $_SERVER["DOCUMENT_ROOT"]."\includes\activities_data.php";
+    // require_once "/Activity-Tracker/includes/activities_data.php";
 
-    echo var_dump($activities);
+    echo $_SERVER['DOCUMENT_ROOT'] . "/includes/activities_data.php";
+    // require_once $_SERVER['DOCUMENT_ROOT'] . "/../includes/activities_data.php";
 
-    $path = "includes/activities_data.php";
-    echo "path : $path";
-    include "$path";
+    // echo var_dump($activities);
+
+    // $path = "includes\activities_data.php";
+    // echo "path : $path";
+    // include "$path";
 
     ?>
     <canvas id="myChart" class="pie_chart" width="400" height="400"></canvas>
