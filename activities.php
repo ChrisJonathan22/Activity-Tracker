@@ -18,21 +18,9 @@
     <h1 class="title">Activities</h1>
     <?php
 
-    // define('DOC_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'].'/');
-    // include_once DOC_ROOT_PATH . "./includes/activities_data.php";
-    // include $_SERVER["DOCUMENT_ROOT"] . "/includes/activities_data.php";
-    // include_once $_SERVER["DOCUMENT_ROOT"]."/includes/activities_data.php";
-    // echo $_SERVER["DOCUMENT_ROOT"]."\includes\activities_data.php";
-    // require_once "/Activity-Tracker/includes/activities_data.php";
+    require $_SERVER['DOCUMENT_ROOT'] . "/includes/activities_data.php";
 
-    echo $_SERVER['DOCUMENT_ROOT'] . "/includes/activities_data.php";
-    // require_once $_SERVER['DOCUMENT_ROOT'] . "/../includes/activities_data.php";
-
-    // echo var_dump($activities);
-
-    // $path = "includes\activities_data.php";
-    // echo "path : $path";
-    // include "$path";
+    echo var_dump($activities);
 
     ?>
     <canvas id="myChart" class="pie_chart" width="400" height="400"></canvas>
