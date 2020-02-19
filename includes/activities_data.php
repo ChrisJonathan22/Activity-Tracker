@@ -8,7 +8,7 @@
 <body>
 <?php 
 
-include_once './db.inc.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
 
 $conn = new Database();
