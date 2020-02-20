@@ -18,11 +18,17 @@
     <h1 class="title">Activities</h1>
     <?php
 
+    // Request activities_data.php
     require $_SERVER['DOCUMENT_ROOT'] . "/includes/activities_data.php";
 
-    echo var_dump($activities);
+    // Loop through the $activities array and output hidden p tags with
+    // each activitie's data
+    foreach($activities as $key => $val) {
+        echo "<p id='$key' hidden>$val</p>" . "<br>";
+    }
 
     ?>
+    <!-- Display the chart -->
     <canvas id="myChart" class="pie_chart" width="400" height="400"></canvas>
 <script src="/js/script.js"></script>
 </body>
