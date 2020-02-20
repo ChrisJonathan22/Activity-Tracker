@@ -1,3 +1,10 @@
+let fitnessTime = Number(document.querySelector('#Fitness').innerHTML);
+let leisureTime = Number(document.querySelector('#Leisure').innerHTML);
+let workTime = Number(document.querySelector('#Work').innerHTML);
+let eatingTime = Number(document.querySelector('#Eating').innerHTML);
+let readingTime = Number(document.querySelector('#Reading').innerHTML);
+let sleepingTime = Number(document.querySelector('#Sleeping').innerHTML);
+
 let ctx = document.getElementById('myChart').getContext('2d');
 let myChart = new Chart(ctx, {
     type: 'pie',
@@ -5,7 +12,7 @@ let myChart = new Chart(ctx, {
         labels: ['Fitness', 'Leisure', 'Work', 'Eating', 'Reading', 'Sleeping'],
         datasets: [{
             label: '# of Votes',
-            data: [12.5, 19, 3, 5, 2, 3],
+            data: [fitnessTime, leisureTime, workTime, eatingTime, readingTime, sleepingTime],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

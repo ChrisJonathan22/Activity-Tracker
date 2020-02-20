@@ -8,16 +8,21 @@
 <body>
 <?php 
 
+// Request db.inc.php which includes the database
 require $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
 
+// Create a new instance of the Database class
 $conn = new Database();
 
+// Create a query
 $query = "SELECT * FROM activity;";
 
+// Use the database method to connect to the database
 $result = mysqli_query($conn->connect(), $query);
 $resultCheck = mysqli_num_rows($result);
 
+// Create variables where each piece of data from the database will be stored
 $fitness = 0;
 $leisure = 0;
 $work = 0;
@@ -26,9 +31,10 @@ $reading = 0;
 $sleeping = 0;
 
 
+// Loop through the result from the database and store the relevant data within
+// each variable and convert it
 if ($resultCheck > 0) {
     while($row = $result->fetch_assoc()) {
-        echo "<p>Activity name: " . $row["activity_name"]. " - Hours: " . $row["activity_hours"]. " Minutes:" . $row["activity_minutes"]. "<br></p>";
 
         switch ($row["activity_name"]) {
             case "Fitness":
@@ -75,8 +81,7 @@ if ($resultCheck > 0) {
     echo "0 results";
 }
 
-echo "Time spent sleeping: " . $reading;
-
+// Create an array and store each data from each variable with the relevant key
 $activities = array(
     "Fitness" => $fitness,
     "Leisure" => $leisure,
