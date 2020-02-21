@@ -91,6 +91,8 @@ $activities = array(
     "Sleeping" => $sleeping
 );
 
+var_dump($activities);
+
 ?>
 </body>
 </html>
