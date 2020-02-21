@@ -13,4 +13,6 @@
     $conn = new Database();
     mysqli_query($conn->connect(), $query);
 
+    header('Location: /activities.php');
+
 ?>
