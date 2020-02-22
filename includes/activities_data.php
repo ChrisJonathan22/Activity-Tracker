@@ -40,37 +40,31 @@ if ($resultCheck > 0) {
             case "Fitness":
                 $fitness += $row["activity_hours"] * 60;
                 $fitness += $row["activity_minutes"];
-                $fitness /= 60;
             break;
 
             case "Leisure":
                 $leisure += $row["activity_hours"] * 60;
                 $leisure += $row["activity_minutes"];
-                $leisure /= 60;
             break;
 
             case "Work":
                 $work += $row["activity_hours"] * 60;
                 $work += $row["activity_minutes"];
-                $work /= 60;
             break;
 
             case "Eating":
                 $eating += $row["activity_hours"] * 60;
                 $eating += $row["activity_minutes"];
-                $eating /= 60;
             break;
 
             case "Reading":
                 $reading += $row["activity_hours"] * 60;
                 $reading += $row["activity_minutes"];
-                $reading /= 60;
             break;
 
             case "Sleeping":
                 $sleeping += $row["activity_hours"] * 60;
                 $sleeping += $row["activity_minutes"];
-                $sleeping /= 60;
             break;
 
             default:
@@ -83,12 +77,12 @@ if ($resultCheck > 0) {
 
 // Create an array and store each data from each variable with the relevant key
 $activities = array(
-    "Fitness" => $fitness,
-    "Leisure" => $leisure,
-    "Work" => $work,
-    "Eating" => $eating,
-    "Reading" => $reading,
-    "Sleeping" => $sleeping
+    "Fitness" => $fitness /= 60,
+    "Leisure" => $leisure /= 60,
+    "Work" => $work /= 60,
+    "Eating" => $eating /= 60,
+    "Reading" => $reading /= 60,
+    "Sleeping" => $sleeping /= 60
 );
 
 var_dump($activities);
