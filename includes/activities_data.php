@@ -30,6 +30,14 @@ $eating = 0;
 $reading = 0;
 $sleeping = 0;
 
+// Check if the activity date matches the current date otherwise do not include
+function checkActivityDate($activityDate) {
+    if ($row["activity_date"] === date("Y-m-d")) {
+        echo "The date matches";
+
+    }
+}
+
 
 // Loop through the result from the database and store the relevant data within
 // each variable and convert it
@@ -40,6 +48,11 @@ if ($resultCheck > 0) {
             case "Fitness":
                 $fitness += $row["activity_hours"] * 60;
                 $fitness += $row["activity_minutes"];
+                // echo $row["activity_date"];
+                // echo "<br>";
+                // echo date("d-m-Y");
+                // echo "<br>";
+
             break;
 
             case "Leisure":
@@ -60,6 +73,12 @@ if ($resultCheck > 0) {
             case "Reading":
                 $reading += $row["activity_hours"] * 60;
                 $reading += $row["activity_minutes"];
+                echo var_dump($row["activity_date"]);
+                echo "<br>";
+                echo var_dump(date("Y-m-d"));
+                if ($row["activity_date"] === date("Y-m-d")) {
+                    echo "The date matches";
+                }
             break;
 
             case "Sleeping":
@@ -85,7 +104,7 @@ $activities = array(
     "Sleeping" => $sleeping /= 60
 );
 
-var_dump($activities);
+// var_dump($activities);
 
 ?>
 </body>
