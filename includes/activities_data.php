@@ -48,11 +48,6 @@ if ($resultCheck > 0) {
             case "Fitness":
                 $fitness += $row["activity_hours"] * 60;
                 $fitness += $row["activity_minutes"];
-                // echo $row["activity_date"];
-                // echo "<br>";
-                // echo date("d-m-Y");
-                // echo "<br>";
-
             break;
 
             case "Leisure":
@@ -103,8 +98,6 @@ $activities = array(
     "Reading" => $reading /= 60,
     "Sleeping" => $sleeping /= 60
 );
-
-// var_dump($activities);
 
 ?>
 </body>
