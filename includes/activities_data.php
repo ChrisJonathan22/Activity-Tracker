@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php 
 
 // Request db.inc.php which includes the database
@@ -15,9 +7,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 // Create a new instance of the Database class
 $conn = new Database();
 
+// Generate current date
 $currentDate = date('Y-m-d');
 
-// Create a query
+// Create a query to fetch activities from the current date
 $query = "SELECT * FROM activity WHERE activity_date = '$currentDate';";
 
 // Use the database method to connect to the database
@@ -73,7 +66,7 @@ if ($resultCheck > 0) {
     }
     }
 } else {
-    echo "0 results";
+    echo "No data found. Please add some data.";
 }
 
 // Create an array and store each data from each variable with the relevant key

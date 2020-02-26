@@ -5,17 +5,6 @@ let eatingTime = Number(document.querySelector('#Eating').innerHTML);
 let readingTime = Number(document.querySelector('#Reading').innerHTML);
 let sleepingTime = Number(document.querySelector('#Sleeping').innerHTML);
 
-function roundNumber(num) {
-
-    if (Number.isInteger(num)) {
-        return num;
-    } else {
-        
-    }
-}
-
-console.log(roundNumber(eatingTime));
-
 let ctx = document.getElementById('myChart').getContext('2d');
 let myChart = new Chart(ctx, {
     type: 'pie',
